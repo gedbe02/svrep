@@ -709,7 +709,7 @@ draw_antal_tille_resample <- function(sel_probs) {
       epsilon <- .Machine$double.eps  # ~2.22e-16
       pi_k_rescaled[pi_k_rescaled == 0] <- epsilon
       ##
-      psi_k <- 1 - sampling::inclusionprobabilities(a = pi_k_rescaled, n = 2)
+      psi_k <- 1 - sampling::inclusionprobabilities(a = pi_k_rescaled, n = 2) 
       
       resamples <- sampling::UPmaxentropy(psi_k)
       nonsampled <- which(resamples == 0)
