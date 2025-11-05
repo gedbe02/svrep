@@ -718,7 +718,7 @@ draw_antal_tille_resample <- function(sel_probs) {
       
     } else {
       
-      pi_k_rescaled <- (sel_probs[!is_certainty]^(-1)) - 1
+      pi_k_rescaled <- (sel_probs[!is_certainty]^(-1)) - 1 
       pi_k_rescaled <- pi_k_rescaled / sum(pi_k_rescaled)
       # Added fallback if majority of weights are 1 except for a few indices
       epsilon <- .Machine$double.eps  # ~2.22e-16
